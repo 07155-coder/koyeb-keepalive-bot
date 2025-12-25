@@ -102,7 +102,7 @@ export default {
     if (text.startsWith('/remove')) {
       const url = text.replace('/remove', '').trim();
       if (!isValidUrl(url)) {
-        await sendTG(env， '❌ URL 格式不正确');
+        await sendTG(env, '❌ URL 格式不正确');
       } else {
         await env.KV.delete(url);
         await sendTG(env, `🗑 已删除：\n${url}`);
